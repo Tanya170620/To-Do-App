@@ -20,7 +20,7 @@
             </div>
             <div class="click-btn" onclick="add(this)">
                 <i class="fas fa-plus-circle fa-2x" style="color: rgb(77, 125, 228);"></i>
-                <span class="add-item-box ">Add Item</span>
+                <span class="add-item-box">Add Item</span>
             </div>
         </div>
         <h1 class="heading-3">No items in the todo list</h1>
@@ -30,33 +30,33 @@
     </div>
 
     <div id="grid-container">
-        <div id="back-button">
-            <i class="fas fa-arrow-circle-left fa-2x" style="color: rgb(77, 125, 228); cursor: pointer;"  onclick="goBack()"></i>
-            <h3 class="add-item-box" style="display: inline;">Back</h3>
+        <div id="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-circle-left fa-2x" style="color: rgb(77, 125, 228); cursor: pointer;"></i>
+            <h3 class="add-item-box">Back</h3>
         </div>
         <div class="subHeading-1"></div>
-        <div class="card-item">
-            <div class="item-heading-1"></div>
+        <div class="card-item-2">
+            <div class="item-heading-2"></div>
             <ul id="list"></ul>
-            <div class="icon-container">
+            <div class="icon-container" id="footer">
                 <i class="bi bi-trash-fill " style="color : orangered; font-size : 30px;cursor: pointer" onclick="deleteCard(this)"></i> 
                 <i class="fas fa-plus-circle fa-2x" style="color: rgb(77, 125, 228); cursor: pointer; margin-left: 5px" onclick="add(this)"></i>
             </div>  
         </div>
     </div>
 
-    <div id="popup-list">
+    <div class="popup" id="popup-list">
         <h4 class="add-new-list-item">Add New List</h4>
-        <input type="text" id="input-box-list" placeholder="Add New List"></input>
+        <input type="text" class="input-box" id="input-box-list" placeholder="Add New List"></input>
         <div class="btn-container">
             <button onclick="add(this)">Add</button>
             <button onclick="closeDialogBox(this)">Close</button>
         </div>
     </div>
 
-     <div id="popup-item">
+     <div class="popup" id="popup-item">
         <h4 class="add-new-list-item">Add New Item</h4>
-        <input type="text" id="input-box-item" placeholder="Add New Item"></input>
+        <input type="text" class="input-box" id="input-box-item" placeholder="Add New Item"></input>
         <div class="btn-container">
             <button onclick="addItem()">Add</button>
             <button onclick="closeDialogBox(this)">Close</button>

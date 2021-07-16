@@ -24,7 +24,7 @@ body  {
     display: inline-block;
     font-size: 3rem;
     font-weight: 900;
-    margin: 1.2rem 0.5rem 1.2rem 0rem;
+    margin: 1.2rem 1px 1.2rem 0rem;
 }
 
 .heading-2 {
@@ -39,6 +39,7 @@ body  {
 }
 
 .add-item-box {
+    display: inline;
     font-size: 2rem;
     font-weight: 100;
     margin-left: 4px;
@@ -47,10 +48,10 @@ body  {
 .heading-3 {
     font-size: 2rem;
     font-weight: 100;
-    margin : 1.75rem 0rem 0.5rem 0.5rem;
+    margin : 1.75rem 0rem 0.5rem 0rem;
 }
 
-#popup-list,#popup-item {
+.popup {
     visibility: hidden;
     background-color: white;
     position: fixed;
@@ -70,7 +71,7 @@ body  {
     transition: all 0.75s;
 }
 
-#popup-list.active ,#popup-item.active {
+.popup.active {
     visibility: visible;
     opacity: 1;
     transform:translateY(-25%);
@@ -103,7 +104,7 @@ body  {
     cursor: pointer;
 }
 
-#input-box-list, #input-box-item{
+.input-box{
     border: 1px solid orangered;
     border-radius: 4px;
     box-shadow: 2px 2px 4px 1px rgb(201, 199, 199);
@@ -120,7 +121,7 @@ body  {
     align-content: space-around;
 }
 
-.card-item {
+.card-item , .card-item-2{
     position: relative;
     min-height: 22rem;
     min-width: 14rem;
@@ -144,7 +145,7 @@ body  {
     align-self: flex-end;
 }
 
-.item-heading-1 {
+.item-heading-1, .item-heading-2 {
     min-width : 14rem;
     display: inline-block;
     padding-top: 1rem;
@@ -159,6 +160,7 @@ body  {
 ul {
     list-style-type: none;
     padding-inline-start: 0px;
+    padding: 5px;
 }
 
 li {
@@ -194,7 +196,8 @@ li {
 }
 
 #back-button {
-    grid-row: 1 / 3
+    grid-row: 1 / 3;
+    cursor: pointer;
 }
 
 .subHeading-1 {
@@ -203,4 +206,88 @@ li {
     font-weight: 700;
     letter-spacing: 3px;
     text-align: center;
+}
+
+@media only screen and (max-width : 600px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    #main-container {
+        margin: 32px 1.2rem;
+    }
+
+    .heading-1 , .heading-2 {
+        font-size: 39px;
+    }
+    
+    .heading-3 , i::before {
+        font-size: 28px;
+    }
+
+    .click-btn{
+        margin-bottom: 10px;
+    }
+
+    .add-item-box,.icon-container, #list-1  {
+        display: none;
+    }
+
+    #footer {
+        display: block;
+    }
+
+    .popup {
+        font-size: 1.5rem;
+        top: 40%;
+        left: 8%;
+        height: 12.5rem;
+        width: 19rem;
+    }
+
+    .input-box {
+        height: 2rem;
+        width: 15rem;
+    }
+
+    .btn-container {
+        justify-content: center;
+    }
+
+    .btn-container button{
+        margin-left: 15px;
+        font-size: 1rem;
+        width: 4rem;
+        height: 2rem;
+        font-weight: 100;
+    }
+
+    #card-container {
+        justify-content: space-around;
+    }
+
+    .card-item {
+        min-height: 2rem;
+        min-width: 17rem;
+    }
+
+    .item-heading-1 {
+        min-width: 17rem;
+        font-size: 25px;
+        height: 50px;
+        cursor: pointer;
+        color: orangered;
+        justify-content: flex-start;
+        text-align: center;
+        border-bottom: 0px;
+    }
+
+    .bi-trash-fill {
+        margin-top: 14px;
+    }
+
+    #grid-container {
+        margin: 5rem 2rem;
+        grid-template-columns: 3rem 12rem;
+    }
 }

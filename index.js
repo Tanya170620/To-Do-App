@@ -64,7 +64,7 @@ function addCard(todo) {
     item.setAttribute("datakey",todo.id);
     item.innerHTML = `
                 <div class="item-heading-1" onclick="openList(this)">${todo.input}</div>
-                <ul></ul>
+                <ul id="list-1"></ul>
                 <div class="icon-container">
                 <i class="bi bi-trash-fill " style="color : orangered; font-size : 30px;cursor: pointer" onclick="deleteCard(this)"></i> 
                 <i class="fas fa-plus-circle fa-2x" style="color: rgb(77, 125, 228); cursor: pointer; margin-left: 5px" onclick="add(this)"></i>
